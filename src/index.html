@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body>
+    <div class="wrapper">
+      <div class="container">
+          @include('partials/burger.html')
+            
+            <main class="main">
+            @include('partials/header.html')
+            @include('partials/_totalBalance.html')
+            @include('partials/_recentTransactions.html')
+
+          </main>
+          <aside>
+            @include('partials/_rightSideBar.html')
+          </aside>
+            
+      </div>
+    </div>
+  </body>
+</html>

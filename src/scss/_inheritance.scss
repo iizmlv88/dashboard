@@ -1,0 +1,12 @@
+%btn {
+  width: $btn-width;
+  height: $btn-height;
+  font-size: 1rem;
+  font-family: "Lexend-Regular";
+  border: none;
+  border-radius: $borderRadius10;
+  cursor: pointer;
+  &:active {
+    transform: scale(0.98);
+  }
+}

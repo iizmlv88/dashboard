@@ -1,0 +1,52 @@
+// html {
+//   box-sizing: border-box;
+// }
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: inherit;
+// }
+
+// .container {
+//   margin: 0 auto;
+//   padding: 0 var(--container-offset);
+//   max-width: var(--container-width);
+// }
+
+// body {
+//   @include lg {
+//     background-color: $secondary;
+//   }
+// }
+
+// .btn_dark {
+//   @extend %btn;
+//   background-color: $black;
+//   color: $white;
+//   &:hover {
+//     background-color: mix($black, $white, 50%);
+//     color: mix($white, $black, 20%);
+//   }
+// }
+
+// .btn_ligth {
+//   @extend %btn;
+//   opacity: 0.7;
+//   color: $black;
+//   &:hover {
+//     background-color: mix($black, $white, 80%);
+//     color: mix($white, $black, 80%);
+//   }
+// }
+
+// .list {
+//   @include flex-start;
+//   list-style-type: none;
+//   gap: 32px;
+// }
+
+
+
+
+

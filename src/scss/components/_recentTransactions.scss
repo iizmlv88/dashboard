@@ -1,0 +1,91 @@
+.recent {
+    min-width: 320px;
+    max-width: 600px;
+    padding-top: 40px;
+    width: 100%;
+        
+}
+.transactions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include ls-600;
+    font-size: 26px;
+    line-height: 130%;
+    color: #1C1D21;
+
+}
+.transactions :nth-child(2) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: nowrap; 
+}
+
+.transactions :nth-child(2) > div {
+    @include ls-400;
+    line-height: 160%;
+    flex-wrap: nowrap;
+}
+
+caption {
+    padding: 25px 0;
+}
+
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    @include ls-400;
+}
+
+td {
+    text-align: left;
+    // background: green;
+    padding: 25px 30px 25px 0;
+    width: 600px;
+}
+
+
+.code {
+    background-color: aqua;
+    @include lm-500;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    color: #1C1D21;
+}
+.hash {
+    @include ls-400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #1C1D21;
+    opacity: 0.3;
+}
+.dollar {
+    @include lm-500;
+    line-height: 160%;
+    color: #1C1D21;
+}
+
+.green {
+    @include ls-400;
+    line-height: 160%;
+    color: #34C759;
+}
+.failed {
+    color: red;
+}
+
+th {
+    text-align: left;
+    padding: 25px 50px 25px 0;
+    @include ls-400;
+    line-height: 160%;
+    color: #687D8C;
+    opacity: 0.6;
+}

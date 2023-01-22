@@ -1,0 +1,159 @@
+.main {
+  width: 100%;
+}
+
+.total {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  gap: 35px;
+}
+
+.total_balance {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  @include ls-600;
+  font-size: 28px;
+  line-height: 130%;
+  color: #1C1D21;
+}
+
+.total_balance :nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.total_balance :nth-child(2)>div {
+  @include ls-400;
+  line-height: 160%;
+  color: #1B224A;
+}
+
+
+.usdc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.usdc :nth-child(1){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.usdc :nth-child(1) > div {
+  font-family: 'Lexend-Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 130%;
+  color: #1B224A;
+}
+.usdc :nth-child(1) :nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  font-family: 'Lexend-Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 130%;
+  color: #0066FE;
+}
+
+.usdc :nth-child(2) {
+  @include ls-400;
+  line-height: 160%;
+  color: #1B224A;
+}
+
+.db {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.btn_dark {
+  @extend %btn;
+  background-color: $black;
+  color: $white;
+
+  &:hover {
+    background-color: mix($black, $white, 50%);
+    color: mix($white, $black, 20%);
+  }
+}
+
+.btn_ligth {
+  @extend %btn;
+  opacity: 0.7;
+  color: $black;
+  &:hover {
+    background-color: mix($black, $white, 80%);
+    color: mix($white, $black, 80%);
+  }
+}
+
+
+@include s {
+  .usdc :nth-child(1) {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@include sm {
+  .total {
+  }
+}
+
+@include md {
+  .total {
+    width: 100%;
+    align-items: flex-start;
+    padding-top: 20px;
+    gap: 25px;
+  }
+  .total_balance {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .usdc {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .usdc :nth-child(1) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .db {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

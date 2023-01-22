@@ -1,0 +1,351 @@
+.wrapper {
+    width: 100%;
+    min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.main {
+    width: 100%;
+    overflow: hidden;
+}
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1C1D21;
+    padding-top: 70px;
+    gap: 30px;
+
+}
+[for="burger"] {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    gap: 3px;
+    border: 1px solid $blue;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    &:hover {
+        opacity: 0.7;
+    }
+    z-index: 200;
+    position: absolute;
+    top: 10px;
+    left: center;
+    @include xxl {
+        display: none;
+    }
+}
+
+[for="burger"] > span {
+    height: 4px;
+    width: 25px;
+    background: $blue;
+    transition: transform 0.3s linear;
+}
+
+#burger:checked ~ label > span:nth-child(1) {
+    transform: rotate(-45deg);
+    position: absolute;
+}
+#burger:checked ~ label>span:nth-child(2) {
+    display: none;
+}
+#burger:checked ~ label>span:nth-child(3) {
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+#burger:checked ~ label ~ .sb {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0 ;
+    left: 0;
+    height: 100vh;
+
+    // height: 100%;
+    overflow: auto;
+    padding: 0;
+    background-color: white;
+    user-select: none;
+    z-index: 100;
+}
+#burger:checked~label~.sb > .sidebar {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100%; 
+    height: 100%;
+    padding: 0;
+    border-radius: 30px;
+    z-index: 200;
+    user-select: none;
+}
+
+#burger:checked~label~.sb>.sidebar > .sidebaruha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 90%;
+    gap: 5px;
+    padding: 0;
+    // padding-top: 100px;
+    padding-top: 25px;
+    border-radius: 30px;
+    z-index: 200;
+    color: white;
+    @include lr-500;
+    @include s {
+        padding-top: 20px;
+    }
+    @media screen and (min-height: 500px ) {
+        gap: 10px;
+    }
+    @media screen and (min-height: 700px) {
+        gap: 20px;
+    }
+}
+
+#burger:checked~label~.sb>.sidebar>.sidebaruha >.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include ls-600;
+    color: #FFFFFF;
+}
+#burger:checked~label~.sb>.sidebar>.sidebaruha> .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    @media screen and (min-height: 500px ) {
+        gap: 15px;
+    }
+    @media screen and (min-height: 700px) {
+        gap: 32px;
+    }
+}
+#burger:checked~label~.sb>.sidebar>.sidebaruha>.menu >:nth-child(1){
+    font-family: 'Lexend-Regular';
+}
+#burger:checked~label~.sb>.sidebar>.sidebaruha>.menu>.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 10px;
+    width: 200px;
+    @media screen and (min-height: 500px ) {
+        gap: 15px;
+        .sidebaruha_svg {
+                padding: 5px 0;
+        
+            }
+    }
+    @media screen and (min-height: 700px) {
+        gap: 25px; 
+        .sidebaruha_svg {
+                padding: 5px 0;
+        
+            }
+    }
+    .sidebaruha_svg {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2px 0;
+        
+    }
+}
+#burger:checked~label~.sb>.sidebar>.sidebaruha>.menu >.side > .seven {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    @media screen and (min-height: 500px ) {
+        gap: 15px;
+    }
+    @media screen and (min-height: 700px) {
+        gap: 25px;
+    }
+}
+#burger:checked~label~.sb>.sidebar>.sidebaruha>.menu>.side>.seven > div {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    
+}
+#burger:checked~label~.sb>.sidebar>.sidebaruha>.menu>.side>.seven>div:hover {
+    background: $blue;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+}
+#burger:checked~label~.sb>.sidebar>.sidebaruha>.menu >.side > .two {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 5px;
+    width: 100%;
+    @media screen and (min-height: 500px ) {
+        gap: 15px;
+    }
+    @media screen and (min-height: 700px) {
+        gap: 25px;
+    }
+}
+#burger:checked~label~.sb>.sidebar>.sidebaruha>.menu>.side>.two >div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+#burger:checked~label~.sb>.sidebar>.sidebaruha>.menu>.side>.two>div:hover {
+    background: $blue;
+    border-radius: 5px;
+    cursor: pointer;
+    
+
+    &:active {
+        
+        transform: scale(0.98);
+    }
+
+}
+.sb {
+    display: none;
+}
+
+.header_end {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome_back {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include ls-600;
+    gap: 20px; 
+}
+
+.welcome_back :nth-child(2) {
+    @include ls-400;
+    color: #1C1D21;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    @include ls-400;
+    gap: 54px;
+}
+
+.search :nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@include s {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .welcome_back {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 8px;
+    }
+    .search {
+        justify-content: flex-end;
+    }
+    .header_end {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 60px;
+    }
+    .welcome_back :nth-child(2) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+@include sm {
+.header_end {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.welcome_back {
+    align-items: flex-start;
+}
+
+}
+
+@include xl {
+    .container {
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
+    }
+    [for="burger"] {
+        position: static;
+        top: 10px;
+        left: center;
+    }
+    .header {
+        padding: 60px 0 90px 0;
+    }
+}

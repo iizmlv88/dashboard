@@ -1,0 +1,31 @@
+@mixin lr-500 {
+    font-family: 'Lexend-Regular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+        
+}
+
+
+@mixin ls-600 {
+    font-family: 'Lexend-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+@mixin ls-400 {
+    font-family: 'Lexend-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+@mixin lm-500 {
+    font-family: 'Lexend-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}

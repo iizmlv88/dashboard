@@ -1,0 +1,128 @@
+.side_final {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    border-radius: 30px;
+    background-color: black;
+    margin: 30px 0;
+    min-height: 100vh;
+    min-width: 270px;
+    color: white;
+    user-select: none;
+    
+    
+}
+.div_svg {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    align-items: center;
+}
+
+.bar_final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 70px;
+   
+}
+.bar_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+    font-family: 'Lexend-SemiBold';
+}
+.bar_logo > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.bar_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    
+}
+.bar_menu > :nth-child(1 ){
+    @include ls-400;
+}
+.bar_side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width:200px;
+    gap: 290px;
+    @include ls-400;
+}
+.bar_seven {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    width: 200px;
+}
+.bar_seven>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+.bar_seven > div:hover {
+    background: $blue;
+    padding: 0 5px;
+    margin-left: -5px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:active {
+            transform: scale(0.98);
+        }
+    
+}
+.bar_two {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+    padding-bottom: 25px;
+    
+}
+.bar_two > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    width: 200px;
+    
+}
+.bar_two>div:hover {
+    background-color: $blue;
+    padding: 0 5px;
+    margin-left: -5px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:active {
+            transform: scale(0.98);
+        }
+
+}
+@include xxl {
+    .side_final {    
+        display: flex;
+    }
+}
